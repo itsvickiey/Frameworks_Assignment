@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # ---------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/user/Desktop/PLP/Framework_assignment/metadata.csv", low_memory=False)
+    df = pd.read_csv("metadata.csv", low_memory=False)
     df["publish_time"] = pd.to_datetime(df["publish_time"], errors="coerce")
     df["year"] = df["publish_time"].dt.year
     return df
